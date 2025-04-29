@@ -101,6 +101,7 @@
       text-shadow: 2px 2px 8px white;
     }
     #bingoButton {
+      display: none;
       padding: 20px 40px;
       font-size: 2rem;
       margin-top: 20px;
@@ -135,7 +136,7 @@
 
   <div id="bingoBoard" class="grid"></div>
 
-  <button id="bingoButton" onclick="triggerBingo()">🎉 BINGO！🎉</button>
+  <button id="bingoButton" onclick="triggerBingo()" style="display:none;">🎉 BINGO！🎉</button>
 
   <div id="bingoEffect">🎉 BINGO！ 🎉</div>
 
@@ -179,6 +180,7 @@
       }
 
       document.getElementById('inputArea').style.display = 'none';
+      document.getElementById('bingoButton').style.display = 'inline-block'; // 🎯ここでBINGOボタン表示
     }
 
     function shuffleArray(array) {
